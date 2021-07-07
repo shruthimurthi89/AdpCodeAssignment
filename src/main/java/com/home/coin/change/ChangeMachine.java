@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 import com.service.coin.change.CMHandler;
 import com.service.coin.change.CoinChangeService;
 
-@SpringBootApplication(scanBasePackages = { "com.service.coin.change" })
+@SpringBootApplication(scanBasePackages = { "com.service.coin.change", "com.home.coin.change" })
 public class ChangeMachine {
 
 	public static void main(String[] args) {
@@ -20,17 +20,17 @@ public class ChangeMachine {
 	}
 
 	private static void handleInputs(CMHandler handler) {
-		String text ="";
-		
-		Scanner scan= new Scanner(System.in);
-		
-		while(true) {
+		String text = "";
+
+		Scanner scan = new Scanner(System.in);
+
+		while (true) {
 			System.out.println("Please enter one of below options");
-			System.out.println("Option 1 : Please enter 1 to get change");		
+			System.out.println("Option 1 : Please enter 1 to get change");
 			System.out.println("Option 2 : Exit");
-			
+
 			text = scan.nextLine();
-			switch(text) {
+			switch (text) {
 			case "1":
 				System.out.println("Enter amount you want to get change for");
 				text = scan.nextLine();
