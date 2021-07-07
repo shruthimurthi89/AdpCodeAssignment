@@ -73,7 +73,7 @@ public class CoinChangeService {
 
 	private double checkAvailable() {
 
-		double total = 1;
+		double total = 0;
 
 		for (Map.Entry<Double, Integer> entry : coinStore.entrySet()) {
 			if (entry.getValue() != 0) {
